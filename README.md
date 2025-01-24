@@ -34,5 +34,4 @@ This project is a Selenium-based test automation framework designed to validate 
   - Checks for valid dropdown and radio button selections.  
   - Verifies that the user is redirected to the summary page after submission.  
 
----
 
