@@ -27,6 +27,7 @@ public class LoginPage {
     private static WebElement errorMessage;
 
 
+
     public void setUsername(String username){
         usernameBox.sendKeys(username);
     }

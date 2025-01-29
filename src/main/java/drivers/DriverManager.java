@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverManager {
 
+    /// Creates a ThreadLocal storage for WebDriver
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     /// Initializes the WebDriver based on the specified browser.
@@ -26,10 +27,11 @@ public class DriverManager {
             default:
                 throw new InvalidArgumentException("Unsupported browser: " + browser);
         }
+        /// Store WebDriver instance in ThreadLocal
         driver.set(localDriver);
     }
 
-    /// Returns the current WebDriver instance.
+    /// Retrieves and returns WebDriver specific to the current thread
     public static WebDriver getDriver() {
         return driver.get();
     }

@@ -54,14 +54,14 @@ public class Base extends DriverManager {
         return validPassword;
     }
 
-    /// Sets up the browser before each test method.
-    @BeforeMethod(alwaysRun = true)
-    public void setUp(@Optional("chrome") String browser){
-        initializeDriver(browser);
-        getDriver().manage().window().maximize();
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        getDriver().get(getBaseUrl());
-    }
+//    /// Sets up the browser before each test method.
+//    @BeforeMethod(alwaysRun = true)
+//    public void setUp(@Optional("chrome") String browser){
+//        initializeDriver(browser);
+//        getDriver().manage().window().maximize();
+//        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//        getDriver().get(getBaseUrl());
+//    }
 
     /// Logs results and takes a screenshot on failure after each test method.
     @AfterMethod

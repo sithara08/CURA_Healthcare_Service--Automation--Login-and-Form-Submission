@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Test Suite" parallel="false" thread-count="2">
+<suite name="Test Suite" parallel="classes" thread-count="2">
     <test name="All Tests Execution">
         <classes>
             <class name="testCases.LoginTest" />
