@@ -3,13 +3,10 @@ package testCases;
 import base.Base;
 import functions.CommonFunctions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-import java.time.Duration;
 
 public class LoginTest extends Base {
 
@@ -22,15 +19,6 @@ public class LoginTest extends Base {
                 {"invalidUsername", getValidPassword(), "fail", "Login failed! Please ensure the username and password are valid."},
                 {"invalidUsername", "invalidPassword", "fail", "Login failed! Please ensure the username and password are valid."}
         };
-    }
-
-    /// Sets up the browser before each test method.
-    @BeforeMethod(alwaysRun = true)
-    public void setUp(@Optional("chrome") String browser){
-        initializeDriver(browser);
-        getDriver().manage().window().maximize();
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        getDriver().get(getBaseUrl());
     }
 
     @Test(testName = "Login Test with Multiple Credentials", dataProvider = "loginData")

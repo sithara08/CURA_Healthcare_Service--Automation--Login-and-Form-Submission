@@ -3,13 +3,10 @@ package testCases;
 import base.Base;
 import functions.CommonFunctions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 import pages.AppointmentPage;
 
-import java.time.Duration;
 
 public class MakeAppointmentTest extends Base {
 
@@ -19,15 +16,6 @@ public class MakeAppointmentTest extends Base {
         return new Object[][]{
                 {2, 3, "2025-03-08", "I need to get an appointment."}
         };
-    }
-
-    /// Sets up the browser before each test method.
-    @BeforeMethod(alwaysRun = true)
-    public void setUp(@Optional("edge") String browser){
-        initializeDriver(browser);
-        getDriver().manage().window().maximize();
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        getDriver().get(getBaseUrl());
     }
 
     @Test(testName = "Make Appointment Test", dataProvider = "appointmentData")
