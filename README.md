@@ -1,5 +1,3 @@
-## Overview 
-
 This project is a Selenium-based test automation framework designed to validate the **Login** and **Appointment Form Submission** functionalities of a sample web application. The framework uses **TestNG** for test execution and data-driven testing.
 
 ---
